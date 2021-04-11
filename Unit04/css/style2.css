@@ -53,6 +53,7 @@
     text-align: left; 
     padding: 0 0 0 20px;
 }
+
 .icons{
     width: 100px;
     height: 32px;
@@ -73,6 +74,10 @@
     display: none;
 }
 .menu .item .sub-menu .sub-item:hover {
+    background: yellow;
+    color: red;
+}
+.menu .item .sub-menu .sub-item:hover .sub-item-list:hover{
     background: yellow;
     color: red;
 }

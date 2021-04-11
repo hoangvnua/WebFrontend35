@@ -29,7 +29,6 @@ strong{
 	display: inline-block;
 	padding-right: 10px;
 }
-
 .img{
 	background-color: white;
 	position: relative;
@@ -39,6 +38,9 @@ strong{
 	text-indent: 10px;
 	display: inline-block;
 	margin-right: 10px;
+}
+.img:hover{
+	color: red;
 }
 .img > img{
 	width: 250px;
