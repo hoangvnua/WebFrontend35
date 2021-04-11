@@ -26,6 +26,11 @@
 	float: left;
 	margin-left: 5%;
 }
+.phai{
+	margin: 13px 0 0 67px;
+	position: absolute;
+	z-index: 1;
+}
 .subheader2{
 	color: orange;
 }
