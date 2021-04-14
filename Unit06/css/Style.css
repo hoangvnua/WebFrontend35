@@ -1,0 +1,274 @@
+nav{
+	width: 100%;
+}
+nav > ul{
+	width: 50%;
+	height: 35px;
+	margin-left: 25%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	overflow: visible;
+	list-style: none;
+	margin-top: 35px;
+	line-height: 35px;
+	text-align: center;
+}
+nav > ul > .menu{
+	float: left;
+}
+nav > ul > .menuleft{
+	float: left;
+	width: 15%;
+}
+nav > ul > .menuright{
+	float: right;
+	width: 15%;
+}
+nav > ul > .anh{
+	display: inline-block;
+	max-width:200px;
+	max-height:168px;
+	width: auto;
+	height: auto;
+	position: relative;
+	top: -35px;
+}
+li:hover{
+	color: red;
+	background-color: #66a791;
+}
+.atc1{
+	text-align: center;
+	background-color: #e3e2e2;
+	padding-top: 100px;
+
+}
+.atc1 > h1{
+	color: #66a791;
+	margin-left: 5%;
+	width: 90%;
+	font-size: 60px;
+}
+.atc1 > p{
+	font-size: 25px;
+}
+.all{
+	width: 90%;
+	padding-left: 5%;
+	text-align: left;
+	
+}
+.text > h4{
+	color: blue;
+}
+.img1{
+	background-image: url(../img/euroloo.co.uk.png);
+	width: 30%;
+	height: 230px;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+}
+.img2{
+	background-image: url(../img/badabooshforschools.co.uk.png);
+	width: 30%;
+	height: 230px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 5%;
+	position: relative;
+}
+.img3{
+	background-image: url(../img/badaboosh.co.uk.png);
+	width: 30%;
+	height: 230px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 5%;
+	position: relative;
+}
+.img4{
+	background-image: url(../img/sellmymobile.com.png);
+	width: 30%;
+	height: 230px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-top: 70px;
+	position: relative;
+}
+.img5{
+	background-image: url(../img/randrbridalwear.co.uk.png);
+	width: 30%;
+	height: 230px;
+	float: left;
+	background-repeat: no-repeat;
+	margin-left: 5%;
+	margin-top: 70px;
+	position: relative;
+}
+.img6{
+	background-image: url(../img/vouchercodedeals.com.png);
+	width: 30%;
+	height: 230px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 5%;
+	margin-top: 70px;
+	position: relative;
+}
+.text{
+	position: absolute;
+	left: 5px;
+	top: 208px;
+	transition: top 2s;
+	overflow: hidden;
+}
+.img:hover >.text{
+	background-color: gray;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+#text{
+	width: 90%;
+	text-align: center;
+	
+	line-height: 200px;
+}
+.atc2{
+	width: 90%;
+	margin-left: 5%;
+}
+.atc2 > .txt1{
+	width: 65%;
+	display: inline-block;
+}
+.atc2 > .txt2{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 3%;
+}
+.txt2 > i{
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 30px;
+}
+.atc3{
+	width: 100%;
+	background-color: #66a791;
+}
+.con{
+	width: 90%;
+	margin-left: 5%;
+}
+input, textarea{
+	width: 100%;
+	border-radius: 5px;
+}
+.vien{
+	display: inline-block;
+	color: #66a791;
+	position: relative;
+	top: -9px;
+}
+@media screen and (min-width: 481px) and (max-width: 700px){
+	.anh > img{
+		width: 80px;
+		height: 70px;
+		position: relative;
+		top: 20px;
+	}
+	nav > ul {
+		font-size: 10px;
+		padding: 0px;
+	
+	}
+	.img{
+		width: 49%;
+		background-size: 100%;
+	}
+	.img3, .img5{
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	.img4, .img6{
+		margin-left: 1%;
+		margin-top: 0px;
+	}
+	.img2{
+		margin-left: 1%;
+	}
+	.menu, .menuleft, .menuright{
+		width: 15%;
+	}
+	.text{
+		position: absolute;
+		left: 5px;
+		top: 120px;
+		transition: top 2s;
+		overflow: hidden;
+	}
+	.atc2{
+		width: 90%;
+		margin-left: 5%;
+	}
+	.atc2 > .txt1{
+		width: 100%;
+	}
+	.atc2 > .txt2{
+		width: 100%;
+	}
+	.txt2 > i{
+		font-size: 50px;
+		margin-left: 30px;
+	}
+	.atc1 > h1{
+		font-size: 30px;
+	}
+	.atc1 > p{
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 480px){
+	.menu, .menuleft, .menuright{
+		display: none;
+	}
+	.anh > img{
+		width: 80px;
+		height: 70px;
+		position: relative;
+		top: 20px;
+		margin-left: 0px;
+	}
+	nav > ul {
+		border: none;
+	}
+	.img{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.atc1 > h1{
+		font-size: 30px;
+	}
+	.atc1 > #title{
+		display: none;
+	}
+	.atc2 > .txt1{
+		width: 100%;
+	}
+	.atc2 > .txt2{
+		width: 100%;
+	}
+	.txt2 > i{
+		font-size: 50px;
+		margin-left: 30px;
+	}
+	.img2, .img3{
+		margin-top: 80px;
+	}
+	#text{
+		display: flex;
+	}
+}
