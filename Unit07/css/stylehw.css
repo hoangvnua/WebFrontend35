@@ -1,0 +1,602 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+.tiltle{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+	margin: 0px;
+}
+.phone{
+	display: none !important;
+}
+.pc{
+	display: block;
+}
+.div1{
+	background-image: url(../img/banner.jpg);
+	width: 100%;
+	height: 100vh;
+	background-size: 100%;
+	z-index: -2;
+	position: relative;
+	object-fit: cover;
+	background-repeat: no-repeat;
+}
+.div1 > #color{
+	width: 100%;
+	background-color: rgba(250 250 250 / 67%);
+	height: 100vh;
+	position: absolute;
+	
+	z-index: -1;
+	top: 0px;
+}
+nav > i{
+	color: black;
+	width: 50%;
+	font-size: 14px;
+	text-align: right;
+	display: none !important;
+}
+nav{
+	display: flex;
+	font-family: 'Lato', sans-serif !important;
+}
+nav > span{
+	width: 50%;
+	color: blue;
+	font-size: 30px;
+	padding-left: 50px;
+	padding-top: 10px;
+}
+nav > ul{
+	width: 50%;
+	text-align: center;
+}
+nav > ul >li{
+	width: 14%;
+	float: left;
+}
+ul{
+	list-style: none;
+}
+.tiltle{
+	width: 80%;
+	margin-left: 10%;
+}
+.bgp{
+	color: blue;
+	font-size: 80px;
+	opacity: 25%;
+	position: relative;
+}
+.cont{
+	font-size: 30px;
+	position: relative;
+	top: -130px;
+}
+p{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+span{
+	color: blue;
+}
+b{
+	color: blue;
+}
+#tt1{
+	font-size: 80px;
+	margin-top: 15%;
+	position: relative;
+}
+#tt2{
+	font-size: 35px;
+	border-right: 2px solid black;
+	display: inline-block;
+	position: relative;
+	top: -90px;
+}
+.about{
+	width: 80%;
+	margin-left: 10%;
+	display: flex;
+	padding-top: 50px;
+}
+.skill{
+	padding-bottom: 70px;
+}
+.icon{
+	box-shadow: 0 0 25px gray;
+	padding: 50px 0 50px 0;
+}
+.icon > i{
+	color: white;
+	background-color: blue;
+	font-size: 30px;
+	padding: 15px;
+	border-radius: 30px;
+}
+.sau{
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	border-radius: 4px;
+}
+.truoc{
+	height: 10px;
+	background-color: blue;
+	border-radius: 4px;
+}
+.html{
+	width: 97%;
+}
+.seo{
+	width: 88%;
+}
+.bst{
+	width: 91%;
+}
+.js{
+	width: 83%;
+}
+.ill{
+	width: 77%;
+}
+.graphics{
+	width: 86%;
+}
+.thongke{
+	display: inline-block;
+	width: 20%;
+	border: 1px dashed blue;
+	padding-top: 20px;
+	margin-left: 4%;
+	padding-bottom: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.thongke > i{
+	color: blue;
+	font-size: 35px;
+}
+.bgwhite{
+	width: 100%;
+}
+.center{
+	width: 80%;
+	text-align: center;
+	margin-left: 10%;
+	display: inline-block;
+}
+.skillname{
+	width: 48%;
+	display: inline-block;
+	text-align: left;
+}
+.skillnumber{
+	width: 48%;
+	display: inline-block;
+	text-align: right;
+}
+.portfolio{
+	margin-top: 20px;
+	width: 100%;
+	margin-left: 0%;
+}
+.portfolio > img{
+	width: 49%;
+	display: inline-block;
+}
+.all{
+	background-color: blue;
+	color: white !important;
+}
+.works{
+	border-radius: 20px;
+	border: 1px solid blue;
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 20px;
+	color: blue;
+	padding: 8px;
+}
+.jonedoe{
+	width: 49%;
+	display: inline-block;
+}
+.jone{
+	width: 90%;
+	position: relative;
+	top: -10px;
+	left: 2px;
+	display: inline-block;
+}
+.jone > img{
+	width: 100%;
+	background-size: 100%;
+}
+.vien1{
+	width: 50px;
+	height: 50px;
+	border-right: 2px solid blue;
+	border-top: 2px solid blue;
+	position: relative;
+	top: 35px;
+	left: 76px;
+	border-radius: 2px;
+}
+.vien2{
+	width: 50px;
+	height: 50px;
+	border-left: 2px solid blue;
+	border-bottom: 2px solid blue;
+	position: relative;
+	top: -58px;
+	border-radius: 2px;
+}
+.imguser{
+	width: 21%;
+	display: inline-block;
+}
+.textuser{
+	width: 75%;
+	margin-left: 3%;
+	display: inline-block;
+	text-align: left;
+}
+.name{
+	display: inline-block;
+}
+.about > #txt{
+	width: 58%;
+
+}
+.about > #img{
+	width: 38%;
+	margin-left: 4%;
+	box-shadow: 0 0 20px gray;
+}
+button{
+	line-height: 35px;
+	background-color: blue;
+	border-radius: 20px;
+	border: 0px solid white;
+	font-size: 15px;
+	color: white;
+}
+.bggray{
+	width: 100%;
+	background-color: gray;
+	margin-top: 50px;
+	box-shadow: 0 8px 10px gray;
+}
+
+.post{
+	width: 28%;
+	display: inline-block;
+	position: relative;
+	margin-left: 2%;
+}
+.bgwhite >.center > .post > .img1{
+	background-image: url(../img/30.jpeg);
+}
+.bgwhite >.center > .post > .img2{
+	background-image: url(../img/40.jpeg);
+}
+.bgwhite >.center > .post > .img3{
+	background-image: url(../img/50.jpeg);
+}
+.bgwhite >.center > .post > .img {
+	width: 100%;
+	background-size: 100%;
+	height: 230px;
+	border-radius: 4px;
+}
+.post > .img > .apr{
+	width: 20%;
+	height: 7%;
+	top: 205px;
+	left: 10px;
+	position: absolute;
+	color: white;
+	background-color: blue;
+}
+.post > .text > .th{
+	width: 20%;
+	height: 7%;
+	left: 10px;
+	top: 0px;
+	position: relative;
+	background-color: gray;
+}
+.post > .text > h3{
+	text-align: left;
+}
+.post > .text > p{
+	text-align: left;
+}
+.post > .text > ul{
+	padding-left: 0px;
+	text-align: left;
+}
+.post > .text > ul > li:hover{
+	border-bottom: 2px solid black;
+}
+.post > .text > ul > li {
+	display: inline-block;
+}
+.tuongtac{
+	background-color: blue;
+	color: white;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-radius: 0 0 4px 4px;
+}
+.tuongtac > ul {
+	padding-left: 0px;
+}
+.tuongtac > ul > li{
+	display: inline-block;
+	width: 30%;
+
+} 
+
+.khoi{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 24%;
+	text-align: center;
+	display: inline-block;
+}
+.khoi > i{
+	font-size: 50px;
+}
+#bgcontact{
+	width: 100%;
+}
+#contact{
+	width: 50%;
+	text-align: center;
+	margin-left: 25%;
+}
+.thongtin{
+	width: 48%;
+	height: 30px;
+	margin-bottom: 20px;
+}
+textarea{
+	width: 98%;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+footer{
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: gray;
+	text-align: center;
+}
+footer > i{
+	background-color: blue;
+	border-radius: 25px;
+	font-size: 20px;
+	padding-top: 10px;
+	width: 45px;
+	height: 35px;
+	color: white;
+}
+@media screen and (max-width: 768px){
+	nav{
+		background-color: white;
+		text-align: left;
+	}
+	.div1 > nav > span{
+		font-size: 15px;
+		padding-left: 10px;
+	}
+	.div1 > nav > ul{
+		display: none;
+	}
+	nav > i{
+		display: inline-block !important;
+		padding-right: 15px;
+		padding-top: 10px;
+	}
+	.tiltle > #tt1{
+		font-size: 32px;
+		top: 20px;
+	}
+	.tiltle > #tt2{
+		font-size: 10px;
+		top: -10px;
+	}
+	.about{
+		width: 100%;
+		display: block;
+		margin-left: 0;
+	}
+	.about > #txt {
+		width: 100%;
+		text-align: center;
+	}
+	.about >#img {
+		width: 98%;
+		margin-left: 1%;
+		margin-top: 20px;
+	}
+	.center{
+		width: 100%;
+		margin-left: 0;
+	}
+	.post{
+		width: 97%;
+		margin-left: 1%;
+	}
+	.icon{
+		width: 90% !important;
+		margin-bottom: 50px;
+	}
+	.thongke{
+		width: 90%;
+		margin-left: 0;
+	}
+	.portfolio{
+		width: 97%;
+		margin-left: 1%;
+	}
+	.portfolio > img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.an{
+		display: none;
+	}
+	.jonedoe{
+		text-align: left;	
+	}
+	.imguser{
+		width: 30%;
+	}
+	.jone > img{
+		width: 100%;
+
+	}
+	.vien1{
+		width: 50px;
+		height: 50px;
+		border-right: 2px solid blue;
+		border-top: 2px solid blue;
+		position: relative;
+		top: 35px;
+		left: 51px;
+		border-radius: 2px;
+	}
+	.vien2{
+		width: 50px;
+		height: 50px;
+		border-left: 2px solid blue;
+		border-bottom: 2px solid blue;
+		position: relative;
+		top: -60px;
+		left: -3px;
+		border-radius: 2px;
+	}
+	.pc{
+		display: none !important;
+	}
+	.phone{
+		display: block !important;
+	}
+	.khoi{
+		width: 100%;
+	}
+	#contact > input{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	nav{
+		text-align: center;
+		display: block;
+	}
+	.div1 > nav > span{
+		font-size: 15px;
+		padding-left: 10px;
+		width: 100%;
+	}
+	.div1 > nav > ul{
+		width: 100%;
+	}
+	nav > i{
+		display: none;
+		padding-right: 15px;
+		padding-top: 10px;
+	}
+	.tiltle > #tt1{
+		font-size: 32px;
+		top: 20px;
+	}
+	.tiltle > #tt2{
+		font-size: 10px;
+		top: -10px;
+	}
+	.about{
+		width: 100%;
+		display: block;
+	}
+	.about > #txt {
+		width: 80%;
+		text-align: center;
+	}
+	.about >#img {
+		width: 80%;
+		margin-top: 20px;
+	}
+	.center{
+		width: 80%;
+		
+	}
+	.post{
+		width: 80%;
+	}
+	.icon{
+		width: 50% !important;
+		margin-bottom: 50px;
+	}
+	.thongke{
+		width: 49%;
+		margin-left: 0;
+	}
+	
+	.portfolio{
+		width: 80%;
+		margin-left: 10%;
+	}
+	.an{
+		display: none;
+	}
+	.jonedoe{
+		text-align: left;	
+	}
+	.imguser{
+		width: 30%;
+	}
+	.jone > img{
+		width: 100%;
+
+	}
+	.vien1{
+		width: 50px;
+		height: 50px;
+		border-right: 2px solid blue;
+		border-top: 2px solid blue;
+		position: relative;
+		top: 35px;
+		left: 51px;
+		border-radius: 2px;
+	}
+	.vien2{
+		width: 50px;
+		height: 50px;
+		border-left: 2px solid blue;
+		border-bottom: 2px solid blue;
+		position: relative;
+		top: -60px;
+		left: -3px;
+		border-radius: 2px;
+	}
+	.pc{
+		display: none !important;
+	}
+	.phone{
+		display: block !important;
+	}
+	.khoi{
+		width: 100%;
+	}
+	#contact > input{
+		width: 100%;
+	}
+}

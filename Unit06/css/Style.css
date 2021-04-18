@@ -61,6 +61,9 @@ li:hover{
 .text > h4{
 	color: blue;
 }
+.img{
+	background-size: 100%;
+}
 .img1{
 	background-image: url(../img/euroloo.co.uk.png);
 	width: 30%;
