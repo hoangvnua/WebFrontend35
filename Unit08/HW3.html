@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var sum = 0;
+		var giaiThua = 1;
+	    var n;
+	    do{
+	    	n = parseInt(prompt("Nhập N > 0"));
+	    	if (n <= 0) {
+	    		alert("Nhập N > 0 !");
+	    	}
+	    }while(n <=0);
+	    
+	    for (var i = 1; i <= n; i++){
+	    	giaiThua = giaiThua * i;
+	    	sum = sum + (1/giaiThua);
+	    }
+	    
+        alert("Tổng = " + sum);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

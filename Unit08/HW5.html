@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		var n;
+		var sum = 0;
+
+		do{
+			n = parseInt(prompt("Nhập N"));
+			if (n <= 0) {
+				alert("Nhập N > 0");
+			}
+		}while(n <= 0);
+
+		for (var i = 1; i <=n; i++){
+			sum += 1/i;
+		}
+		alert("Tổng : " + sum);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
