@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p id="test1">Thẻ p thứ 1</p>
+
+	<p class="test2">Thẻ p thứ 2</p>
+	<p class="test2">Thẻ p thứ 3</p>
+
+	<p id="test4">Thẻ p thứ 4</p>
+	<input id="test5" type="text">
+
+	<script type="text/javascript">
+		var test1 = document.getElementById('test1');
+		test1.style.color = "red";
+		test1.style.fontSize = '40px';
+		console.log(test1.style.fontSize);
+
+		var test2 = document.getElementsByClassName('test2');
+		for(var i = 0; i<2; i++){
+			test2[i].style.color = "green";
+		}
+
+		// var test3 = document.getElementsByTagName('p');
+		// for(var i = 0; i<=2; i++){
+		// 	test3[i].style.color = "red";
+		// }
+
+		var test4 = document.getElementById("test4");
+		console.log(test4.innerHTML);
+		test4.innerHTML = "Thay đổi test4";
+
+		var test5 = document.getElementById("test5");
+		console.log(test5.type);
+		test5.type = "password";
+	</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+        body{
+            background-color: pink;
+        }
+        div.container {
+            width: 60%;  
+            margin: auto;
+        }
+        /* định dạng thẻ div chưa các button tab */
+        div.tab {
+            overflow: hidden;   
+            border: none;
+        }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background-color: gray;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* đổi màu khi một button tab được hover */
+        div.tab button:hover {
+            background-color: white;
+        }
+
+        /* đổi màu nền cho tab đang được hiển thị nội dung */
+        div.tab button.active {
+            background-color: white;
+        }
+
+        /* định dạng nội dung hiển thị */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            background-color: white;
+            
+        }
+        #tab1{
+        	display: block;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="tab">
+              <button class="tablinks active" onclick="changetab(event, 'tab1')">Tab 1</button>
+              <button class="tablinks" onclick="changetab(event, 'tab2')">Tab 2</button>
+              <button class="tablinks" onclick="changetab(event, 'tab3')">Tab 3</button>
+            </div>
+
+            <div id="tab1" class="tabcontent">
+                <h3>Section 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ratione minus quo assumenda numquam dolor exercitationem voluptas, quasi nulla mollitia nihil amet et placeat voluptates debitis aspernatur quam sint tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non cumque deleniti omnis eum aspernatur consequuntur nobis ipsa, nam, porro dicta, doloremque. Dolores nobis non, totam ipsa aspernatur aliquam quas?
+                </p>
+            </div>
+
+            <div id="tab2" class="tabcontent">
+                <h3>Section 2</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Sint distinctio commodi vitae eligendi, ea quaerat ut sequi minima perferendis debitis iure iusto eveniet fugit a qui ipsa possimus deserunt ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iste labore accusantium, omnis, autem, rem libero harum temporibus beatae eos sapiente. Ea illum voluptatem qui odit dolorem, similique, officiis magni!
+                </p> 
+            </div>
+
+            <div id="tab3" class="tabcontent">
+                <h3>Section 3</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Illo ducimus sunt dolor similique sequi laudantium vero beatae atque commodi. Dolorum debitis quia, ex odit deserunt impedit inventore cumque eligendi facere. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nisi culpa necessitatibus consequatur laborum minima beatae et vitae dolores, ratione natus! Architecto numquam, repellendus quas dignissimos consequatur consequuntur, non!
+                </p>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function changetab(evt, section) {
+		var i, tabcontent, tab;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(section).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+    </script>
+</html>

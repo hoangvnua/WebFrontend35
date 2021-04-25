@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			border: 1px solid black;
+			width: 30%;
+			padding-left: 10px;
+			padding-bottom: 20px;
+		}
+		button{
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Cỡ chữ</p>
+		<button id="btn1">Mặc định</button>
+		<button id="btn2">Lớn</button>
+		<button id="btn3">Nhỏ</button>
+	</div>
+	<p id="resize">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, doloremque, soluta! Placeat alias, quam, amet, hic animi perspiciatis reiciendis iusto neque quibusdam ullam voluptas et fuga sint, asperiores! Voluptatibus, aperiam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto commodi consectetur voluptatibus ducimus, delectus accusantium, porro iste suscipit necessitatibus aliquid veritatis, accusamus ratione voluptate ea deserunt vel sint provident, mollitia?</p>
+	<script type="text/javascript">
+		var btn1 = document.getElementById('btn1');
+		btn1.addEventListener('click', function(){
+			document.getElementById('resize').style.fontSize = '16px';
+		})
+		var btn2 = document.getElementById('btn2');
+		btn2.addEventListener('click', function(){
+			document.getElementById('resize').style.fontSize = '140%';
+		})
+		var btn3 = document.getElementById('btn3');
+		btn3.addEventListener('click', function(){
+			document.getElementById('resize').style.fontSize = '60%';
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+	background-color: pink;
+	width: 60%;
+	margin: auto;
+}
+.tab{
+	overflow: hidden;
+	border: 0px solid black;
+	margin-top: 20px;
+	transition: 0.3s;
+}
+.tablink{
+	background-color: gray;
+	border: none;
+	font-size: 20px;
+	padding: 14px 16px;
+	outline: none;
+}
+.tab > button:hover{
+	background-color: white;
+}
+.tab > .active{
+	background-color: white;
+}
+.tabcontent{
+	display: none;
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-top: none;
+    background-color: white;
+}

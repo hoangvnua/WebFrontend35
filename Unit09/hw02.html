@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: #8383a4;
+        }
+        tr:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" cellspacing="0px" align="center" width="50%">
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "ckbox"></td>
+            <td>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</td>
+        </tr>
+    </table>
+    <br>
+    <div id="check" align="center">
+        <u id="checkall">Check all</u>
+        <u id="uncheckall">Uncheck all</u>
+    </div>
+    <script type="text/javascript">
+        var checkall = document.getElementById('checkall');
+        checkall.addEventListener('click', function(){
+            var checkboxes = document.getElementsByName('ckbox');
+            for (var i = 0; i < checkboxes.length; i++){
+                checkboxes[i].checked = true;
+            }
+        });
+        var uncheckall = document.getElementById('uncheckall');
+        uncheckall.addEventListener('click', function(){
+            var checkboxes = document.getElementsByName('ckbox');
+            for (var i = 0; i < checkboxes.length; i++){
+                checkboxes[i].checked = false;
+            }
+        });
+    </script>
+</body>
+</html>
