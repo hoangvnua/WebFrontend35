@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+	<form action="#" name="bmdk" onsubmit="return validate()">
+		<div class="khung">
+			<div class="row">
+			<div class="text"><p>Họ và tên</p></div>
+			<div class="nhap"><input type="text" placeholder="Nhập họ tên..." name="name"> <span id="nameloc"></span></div>
+		</div>
+		<div class="row">
+			<div class="text"><p>Giới tính</p></div>
+			<div class="nhap gt">Nam <input checked="checked" type="radio" name="gt"> Nữ <input type="radio" name="gt"></div>
+		</div>
+		<div class="row">
+			<div class="text"><p>Email</p></div>
+			<div class="nhap"><input type="text" placeholder="Nhập email..." name="email"> <span id="emailloc"></span></div>
+		</div>
+		<div class="row">
+			<div class="text"><p>Số điện thoại</p></div>
+			<div class="nhap"><input type="text" placeholder="Nhập số điện thoại..." name="sdt"> <span id="sdtloc"></span></div>
+		</div>
+		<div class="row">
+			<div class="text"><p>Mật khẩu</p></div>
+			<div class="nhap"><input type="password" name="pw"> <span id="pwloc"></span></div>
+		</div>
+		<div class="row">
+			<div class="text"><p>Xác nhận mật khẩu</p></div>
+			<div class="nhap"><input type="password" name="psw"> <span id="pswloc"></span></div>
+		</div>
+	</div>
+		
+	<div id="btn">
+		<input type="submit" value="Đăng ký">
+		<input type="button" value="Xóa trắng">
+	</div>
+	</form>
+	
+	<script type="text/javascript">
+		function validate() {
+			var name = document.bmdk.name.value;
+			var email = document.bmdk.email.value;
+			var sdt = document.bmdk.sdt.value;
+			var pw = document.bmdk.pw.value;
+			var psw = document.bmdk.psw.value;
+			var atposition = email.indexOf("@");
+        	var dotposition = email.lastIndexOf(".");
+			var status = false;
+
+			if (name.length < 8) {
+	            document.getElementById("nameloc").innerHTML = "Nhập đầy đủ họ tên";
+	            status = false;
+        	} else {
+            document.getElementById("nameloc").innerHTML = "";
+            status = true;
+        	}
+        	if (email.length < 1) {
+	            document.getElementById("emailloc").innerHTML = "Nhập email";
+	            status = false;
+        	} else if (atposition < 1 || dotposition < (atposition + 2)
+                || (dotposition + 2) >= email.length) {
+        		document.getElementById("emailloc").innerHTML = "Vui lòng nhập đúng định dạng email";
+	            status = false;
+        	} else {
+            document.getElementById("emailloc").innerHTML = "";
+            status = true;
+        	}
+        	if (sdt.length < 1) {
+	            document.getElementById("sdtloc").innerHTML = "Nhập số điện thoại";
+	            status = false;
+        	} else if (sdt.length < 9) {
+        		document.getElementById("sdtloc").innerHTML = "Số điện thoại phải >= 10 số";
+	            status = false;
+        	} else if (isNaN(sdt)) {
+        		document.getElementById("sdtloc").innerHTML = "Vui lòng nhập đúng định dạng";
+	            status = false;
+        	} else {
+            document.getElementById("sdtloc").innerHTML = "";
+            status = true;
+        	}
+        	if (pw.length < 1) {
+	            document.getElementById("pwloc").innerHTML = "Mật khẩu không được để trống";
+	            status = false;
+        	} else {
+            document.getElementById("pwloc").innerHTML = "";
+            status = true;
+        	}
+        	if (psw != pw) {
+	            document.getElementById("pswloc").innerHTML = "Mật khẩu không khớp";
+	            status = false;
+        	} else if (psw.length < 1) {
+        		document.getElementById("pswloc").innerHTML = "Mật khẩu không được để trống";
+	            status = false;
+        	} else {
+            document.getElementById("pswloc").innerHTML = "";
+            status = true;
+        	}
+        return status;
+		}
+	</script>
+</body>
+</html>

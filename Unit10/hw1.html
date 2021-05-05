@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+	<div class="slideshow-container">
+
+		<div class="mySlides fade slide1">
+			<div class="numbertext">1 / 5</div>
+			<img src="https://i.ytimg.com/vi/jKocOK2RTJw/maxresdefault.jpg">
+			<div class="text">Caption Text</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 5</div>
+			<img src="https://chiase24.com/wp-content/uploads/2019/09/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-ng%C6%B0%E1%BB%9Di-g%E1%BB%97-bu%E1%BB%93n-t%C3%A2m-tr%E1%BA%A1ng-27-1-scaled.jpg">
+			<div class="text">Caption Two</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 5 </div>
+			<img src="https://anhdep123.com/wp-content/uploads/2020/05/%E1%BA%A3nh-b%E1%BA%A7u-tr%E1%BB%9Di-%C4%91%C3%AAm-1024x640.jpg">
+			<div class="text">Caption Three</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 5</div>
+			<img src="https://phunugioi.com/wp-content/uploads/2020/10/hinh-anh-buon-dep-quay-lung.jpg">
+			<div class="text">Caption four</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">5 / 5</div>
+			<img src="https://phunugioi.com/wp-content/uploads/2020/10/hinh-anh-buon-dep-quay-lung.jpg">
+			<div class="text">Caption five</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span>  
+
+	</div>
+	<script type="text/javascript">
+		var slideIndex = 0;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 10000);
+		}
+	</script>
+</body>
+</html>
