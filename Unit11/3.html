@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+	<p> thẻ p </p>
+
+	<button>Thêm đoạn text</button>
+	<div>
+		
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("p").on("click", function(){
+				$(this).css({"color":"red"})
+			})
+
+			$("button").on("click", function(){
+				$("div").append("<p class = 'test'>thẻ p</p>");
+			})
+
+			$("div").on('click','.test', function(){
+				alert("đã click thành công thẻ p");
+			})
+		})
+	</script>
+</body>
+</html>

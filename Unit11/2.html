@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+	<style>
+		.red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="test">Học online nè</h1>
+	<h1 id="test2">thẻ thứ 2</h1>
+
+	<input type="text" id="test3" value="abc">
+	<p>đây là thẻ p</p>
+
+	<h5 class="red">đây là thẻ h5 Remove</h5>
+	<h6>đây là thẻ h6 Empty</h6>
+
+	<b>Đây là thẻ b</b>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("h5").remove();
+			$("h6").empty();
+
+			$("p").prepend("a hihi");
+			$("#test2").before("a hihi");
+
+			$("p").append("a hihi");
+			$("#test2").after("a hihi");
+
+			$("b").addClass("red");
+			$("b").removeClass("red");
+		})
+	</script>
+</body>
+</html>

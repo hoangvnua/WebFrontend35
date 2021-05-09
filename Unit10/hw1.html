@@ -1,86 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/style1.css">
-</head>
-<body>
-	<div class="slideshow-container">
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<title>Bài 2 với slide</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			#slide-show {
+				width: 60%;
+				height: 400px;
+				margin: 0 auto;
+				position: relative;
+				margin-top: 50px;
+			}
+			.img-slide {
+				max-width: 100%;
+				min-width: 100%;
+				max-height: 100%;
+				min-height: 100%;
+				/*display: none;*/
+			}
 
-		<div class="mySlides fade slide1">
-			<div class="numbertext">1 / 5</div>
-			<img src="https://i.ytimg.com/vi/jKocOK2RTJw/maxresdefault.jpg">
-			<div class="text">Caption Text</div>
-		</div>
+			#prev {
+				position: absolute;
+				top: 40%;
+				left: 0px;
+				cursor: pointer;
+				background: gray;
+				border: 1px solid gray;
+				opacity: 0.8;
+				width: 50px;
+				display: none;
+			}
 
-		<div class="mySlides fade">
-			<div class="numbertext">2 / 5</div>
-			<img src="https://chiase24.com/wp-content/uploads/2019/09/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-ng%C6%B0%E1%BB%9Di-g%E1%BB%97-bu%E1%BB%93n-t%C3%A2m-tr%E1%BA%A1ng-27-1-scaled.jpg">
-			<div class="text">Caption Two</div>
-		</div>
+			#next {
+				position: absolute;
+				top: 40%;
+				right: 0px;
+				cursor: pointer;
+				background: gray;
+				border: 1px solid gray;
+				opacity: 0.5;
+				width: 50px;
+				display: none;
+			}
+			.conveyor-btn {
+				width: 50%;
+				height: 30px;
+				/*background: red;*/
+				position: absolute;
+				bottom: 2px;
+				right: 0px;
+				opacity: 0.8;
+			}
+			.button-element {
+				width: 20px;
+				height: 20px;
+				margin: 3px;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" >
+			window.onload = function(){
+				document.getElementById('slide-show').addEventListener('mouseover', function() {
+					document.getElementById('prev').style.display="block";
+					document.getElementById('next').style.display="block";
+				});
+				document.getElementById('slide-show').addEventListener('mouseout', function() {
+					document.getElementById('prev').style.display="none";
+					document.getElementById('next').style.display="none";
+				});
 
-		<div class="mySlides fade">
-			<div class="numbertext">3 / 5 </div>
-			<img src="https://anhdep123.com/wp-content/uploads/2020/05/%E1%BA%A3nh-b%E1%BA%A7u-tr%E1%BB%9Di-%C4%91%C3%AAm-1024x640.jpg">
-			<div class="text">Caption Three</div>
-		</div>
+				var imgSlide 	= document.getElementsByClassName("img-slide");
+				var prev 		= document.getElementById('prev');
+				var next		= document.getElementById('next');
+				var numbSide = 0;
 
-		<div class="mySlides fade">
-			<div class="numbertext">4 / 5</div>
-			<img src="https://phunugioi.com/wp-content/uploads/2020/10/hinh-anh-buon-dep-quay-lung.jpg">
-			<div class="text">Caption four</div>
-		</div>
+				amimationSlide();
 
-		<div class="mySlides fade">
-			<div class="numbertext">5 / 5</div>
-			<img src="https://phunugioi.com/wp-content/uploads/2020/10/hinh-anh-buon-dep-quay-lung.jpg">
-			<div class="text">Caption five</div>
-		</div>
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-	</div>
-	<br>
+				// button
 
-	<div style="text-align:center">
-		<span class="dot" onclick="currentSlide(1)"></span> 
-		<span class="dot" onclick="currentSlide(2)"></span> 
-		<span class="dot" onclick="currentSlide(3)"></span>
-		<span class="dot" onclick="currentSlide(4)"></span> 
-		<span class="dot" onclick="currentSlide(5)"></span>  
+				prev.addEventListener('click', function() {
+					numbSide--;
+					showSlide();
+				});
 
-	</div>
-	<script type="text/javascript">
-		var slideIndex = 0;
-		showSlides(slideIndex);
+				next.addEventListener('click', function() {
+					numbSide++;
+					showSlide();
+				});
+				// end button
 
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
+				function amimationSlide() {
+					for(var i = 0; i < imgSlide.length; i++) {
+						imgSlide[i].style.display="none";
+					}
 
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
+					numbSide++;
+					if(numbSide < 0) {
+						numbSide = imgSlide.length - 1;
+					}
+					if(numbSide > imgSlide.length) {
+						numbSide = 1;
+					}
 
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
-		  if (n > slides.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-		      slides[i].style.display = "none";  
-		  }
-		  slideIndex++;
-		  if (slideIndex > slides.length) {slideIndex = 1}
-		  for (i = 0; i < dots.length; i++) {
-		      dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
-		  setTimeout(showSlides, 10000);
-		}
-	</script>
-</body>
+					imgSlide[numbSide-1].style.display="block";
+
+					setTimeout(amimationSlide, 5000);
+				}
+
+				function showSlide() {
+					for(var i = 0; i < imgSlide.length; i++) {
+						imgSlide[i].style.display="none";
+					}
+
+					if(numbSide < 1) {
+						numbSide = imgSlide.length;
+					}
+					if(numbSide > imgSlide.length) {
+						numbSide = 1;
+					}
+
+					imgSlide[numbSide-1].style.display="block";
+				}
+			}
+
+			function elementSlide(n) {
+				for(var i = 0; i < document.getElementsByClassName("img-slide").length; i++) {
+					document.getElementsByClassName("img-slide")[i].style.display="none";
+				}
+				document.getElementsByClassName("img-slide")[n].style.display="block";
+			}
+		</script>
+	</head>
+	<body>
+		<center id="slide-show">
+			<img src="https://4.bp.blogspot.com/-F0F26YgXx40/WOOnf82bccI/AAAAAAAAmEE/DKEaUzgsTOoS4PZj4iNyTzzpEtSvPN25ACLcB/s640/beautiful-landscape-wallpapers-wide.jpg" class="img-slide">
+			<img src="http://4.bp.blogspot.com/-iKu_5qmseFA/VGwBLdcy_EI/AAAAAAAAGU4/sgpb_jF19XU/s1600/anh-phong-canh-dep-nhat-5.jpg" class="img-slide">
+			<img src="https://lh4.googleusercontent.com/-f3rt8RVkcPo/WNtXP2ZBMDI/AAAAAAAARmk/he3VZdTRT00pM6X71-bLSDJPFxUXBSQogCLcB/s1600/shopdohoa.net_HD1920482.JPG" class="img-slide">
+			<img src="http://tiki.vn/tu-van/wp-content/uploads/2015/11/3cb5901c-658a-4e7e-9ba1-6d071e454275.jpg" class="img-slide">
+
+			<!-- button -->
+			<div class="conveyor-btn">
+				<button class="button-element" onclick="elementSlide(0)"></button>
+				<button class="button-element" onclick="elementSlide(1)"></button>
+				<button class="button-element" onclick="elementSlide(2)"></button>
+				<button class="button-element" onclick="elementSlide(3)"></button>
+			</div>
+			<img src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Arrow-Back-2-icon.png" id="prev">
+			<img src="http://www.iconarchive.com/download/i95457/iconsmind/outline/Arrow-Next.ico" id="next">
+		</center>
+	</body>
 </html>
