@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style1.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+	<div id="menu">
+		<p id="brand">WordPress Responsive Menu</p>
+		<ul id="menubar">
+			<li id="about"><a href="#">About</a></li>
+			<li id="pricing"><a href="#">Pricing</a></li>
+			<li id="updatepro"><a href="#">Why Go Pro?</a></li>
+			<li id="support">
+				<a href="#">Support <i class="fas fa-chevron-down"></i></a>
+				<ul>
+					<li><a href="#">Docs</a></li>
+					<li><a href="#">FAQ</a></li></li>
+					<li><a href="#">Donate</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</li>
+			<li id="Account"><a href="#">Account</a></li>
+		</ul>
+
+		<i class="fas fa-bars nav"></i>
+		<i class="fas fa-times close"></i>
+
+		<!-- menu rèm -->
+		<div id="rem">
+			<div id="none">
+				<img src="img/hoang.jpg" alt="">
+				<p id="brandrem">Responsive Menu</p>
+				<span id="describe">No coding knowledge needed</span>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Why Go Pro?</a></li>
+					<li id="supportrem">
+						<a href="#">Support <i class="fas fa-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Docs</a></li>
+							<li><a href="#">FAQ</a></li></li>
+							<li><a href="#">Donate</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Account</a></li>
+				</ul>
+			</div>
+			
+		</div>
+
+	</div>
+	<div id="body">
+		<h1>Wordpress Responsive Menu Plugin</h1>
+		<p>
+			Taking the stress out of bullding your website
+		</p>
+		<br>
+		<button><i class="fab fa-get-pocket"></i> GET IT NOW</button>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			
+			$("#support").mouseover(function(){
+				$("#menubar > li >ul").show()
+			})
+			$("#support").mouseleave(function(){
+				$("#menubar > li >ul").hide()
+			})
+
+			$("#supportrem").on("click", function(){
+				$("#rem > #none > ul > li >ul").toggle()
+			})
+
+			$(".nav").on("click", function(){
+				$(".close").show()
+				$("#rem").css("width", "60%")
+				$(".nav").fadeOut()
+				$(".nav").css("color", "red")
+				$("#none").show()
+			})
+
+			$(".close").on("click", function(){
+				$(".nav").show()
+				$("#rem").css("width", "0")
+				$(".close").hide()
+				$("#none").hide()
+				$(".nav").css("color", "white")
+			})
+
+		})
+	</script>
+</body>
+</html>

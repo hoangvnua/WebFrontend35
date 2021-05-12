@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style2.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+	<h1>Album bé gái dễ thương</h1>
+	<div id="row">
+		<div class="colum">
+			<img src="https://img1.kienthucvui.vn/uploads/2021/01/22/hinh-anh-co-con-gai-sieu-de-thuong_092440225.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="colum">
+			<img src="https://icapi.org/wp-content/uploads/2019/11/hinh-anh-be-gai-6.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="colum">
+			<img src="https://icapi.org/wp-content/uploads/2019/11/hinh-anh-be-gai-6.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="colum">
+			<img src="http://imagesfb.tintuc.vn/upload/images/haiduong/20170705/be%20gai%203.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="colum">
+			<img src="http://imagesfb.tintuc.vn/upload/images/haiduong/20170705/be%20gai%203.jpg" alt="bé gái dễ thương">
+		</div>
+	</div>
+	<div>
+		
+	<div id="modal">
+		<div class="full">
+			<i class="fas fa-times"></i>
+			<img src="https://img1.kienthucvui.vn/uploads/2021/01/22/hinh-anh-co-con-gai-sieu-de-thuong_092440225.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="full">
+			<i class="fas fa-times"></i>
+			<img src="https://icapi.org/wp-content/uploads/2019/11/hinh-anh-be-gai-6.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="full">
+			<i class="fas fa-times"></i>
+			<img src="https://icapi.org/wp-content/uploads/2019/11/hinh-anh-be-gai-6.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="full">
+			<i class="fas fa-times"></i>
+			<img src="http://imagesfb.tintuc.vn/upload/images/haiduong/20170705/be%20gai%203.jpg" alt="bé gái dễ thương">
+		</div>
+		<div class="full">
+			<i class="fas fa-times"></i>
+			<img src="http://imagesfb.tintuc.vn/upload/images/haiduong/20170705/be%20gai%203.jpg" alt="bé gái dễ thương">
+		</div>
+	</div>
+	<div>
+
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".colum").eq(0).on("click", function(){
+				$(".full").eq(0).show('width = "500px"')
+			})
+			$(".colum").eq(1).on("click", function(){
+				$(".full").eq(1).show('width = "500px"')
+			})
+			$(".colum").eq(2).on("click", function(){
+				$(".full").eq(2).show('width = "500px"')
+			})
+			$(".colum").eq(3).on("click", function(){
+				$(".full").eq(3).show('width = "500px"')
+			})
+			$(".colum").eq(4).on("click", function(){
+				$(".full").eq(4).show('width = "500px"')
+			})
+			$("i").on("click", function(){
+				$(".full").hide()
+			})
+		})
+	</script>
+</body>
+</html>

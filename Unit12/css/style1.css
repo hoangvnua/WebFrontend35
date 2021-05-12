@@ -1,0 +1,134 @@
+
+body{
+	margin: 0px;
+	background-color: orange;
+	background-image: linear-gradient(to left, orange, red);
+	width: 100%;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#menu{
+	background-color: orange;
+	background-image: linear-gradient(to right, orange, red);
+	line-height: 30px;
+	color: white;
+	height: 60px;
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+#menu > #brand{
+	display: flex;
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+#rem > #none > ul, #rem > #none > ul > li {
+	padding: 0px;
+}
+#menu > #menubar{
+	display: flex;
+	width: 50%;
+	text-align: center;
+}
+#menu > #menubar > li {
+	width: 19%;
+}
+a{
+	color: white;
+	width: 100%;
+}
+#menubar > li > ul{
+	display: none;
+	padding: 0px;
+	background-color: black;
+}
+#rem > #none > ul > li >ul{
+	display: none;
+}
+#rem > #none > ul{
+	text-align: left;
+	margin-left: 20px;
+}
+#menubar > li > ul >li{
+	border-top: 1px solid white;
+	width: 100%;
+}
+#menu > .nav{
+	display: none;
+	position: absolute;
+	right: 20px;
+	line-height: 60px;
+	font-size: 30px;
+}
+#menu > .close{
+	display: none;
+	position: absolute;
+	right: 20px;
+	line-height: 60px;
+	font-size: 30px;
+}
+#menu > #menubar > li:hover{
+	background-color: black;
+}
+#body{
+	margin-top: 15%;
+	text-align: center;
+	color: white;
+}
+button{
+	padding: 10px 25px 10px 25px;
+	color: white;
+	background-color: orange;
+	border: 2px solid white;
+	background-image: linear-gradient(to left, orange, red);
+}
+#rem{
+	
+	position: fixed;
+	background-color: rgba(0,0,0, 0.9);
+	height: 100vh;
+	width: 0;
+	text-align: center;
+	transition: width 0.5s;
+}
+
+a:hover{
+	color: green;
+}
+img{
+	width: 70px;
+	height: 70px;
+	border: 2px solid blue;
+	margin-top: 20px;
+	border-radius: 50px;
+}
+#none{
+	display: none;
+}
+
+@media(max-width: 1333px){
+	#brand, #menubar{
+		display: none !important;
+	}
+	.nav{
+		display: block !important;
+
+	}
+	#body{
+		font-size: 12px;
+		margin-top: 20%;
+	}
+}
+
+@media(max-width: 750px){
+	#body{
+		font-size: 10px;
+		margin-top: 50%;
+	}
+}
