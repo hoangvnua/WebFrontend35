@@ -1,0 +1,90 @@
+.nav{
+	background-image: url(../img_unit13_resposive/bg-masthead.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	color: white;
+}
+.nav > div{
+	padding-top: 15%;
+}
+nav > a{
+	font-family: 'Days One', sans-serif;
+}
+hr{
+	width: 5%;
+	height: 1px;
+}
+.hr1{
+	background-color: red;
+}
+.hr2{
+	background-color: white;
+}
+.about{
+	background-color: #da220aeb;
+	text-align: center;
+	padding: 80px 0;
+}
+.service{
+	text-align: center;
+	padding: 80px 0;
+}
+i{
+	color: #da220aeb;
+	font-size: 60px;
+}
+.hi{
+	padding: 0;
+}
+img{
+	width: 100%;
+}
+.img{
+	padding: 0;
+}
+.row{
+	margin: 0;
+}
+.img > .row > div{
+	padding: 0;
+	}
+.footer{
+	text-align: center;
+	background-color: grey;
+	padding: 80px 0;
+}
+button{
+	border-radius: 25px;
+	border: 0px solid white;
+	padding: 10px;
+}
+.button1{
+	background-color: #da220aeb;
+}
+.button2{
+	background-color: white;
+}
+button:hover{
+	background-color: green;
+}
+@media (min-width: 992px){
+	nav > div{
+		position: absolute;
+		right: 5%;
+	}
+	li{
+		margin-right: 50px;
+	}
+	a{
+		color: white !important;
+	}
+	li > div > a {
+		color: black !important;
+	}
+}
+@media (max-width: 991px){
+	nav {
+		background-color: white;
+	}
+}
