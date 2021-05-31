@@ -43,8 +43,8 @@ img{
 .img{
 	padding: 0;
 }
-.row{
-	margin: 0;
+.mg{
+	margin: 0 !important;
 }
 .img > .row > div{
 	padding: 0;
