@@ -86,6 +86,13 @@
     width: 100%;
     display: block;
   }
+  .lg > a > img{
+  height: 40px;
+  margin-top: -19px;
+}
+.lg > a > span{
+  font-size: 50px;
+}
 }
 /*fashion show*/
 .card {

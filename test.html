@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web của Hoàng</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+		body{
+			background: url(totinh.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+
+		}
+		h1{
+			text-align: center;
+			color: #02bc66;
+			font-family: 'Merriweather', serif;
+			position: absolute;
+			top: 30%;
+			font-size: 20px;
+			width: 100%;
+		}
+		span{
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			background-color: #000;
+		}
+		a{
+			text-decoration: none;
+			font-weight: bold;
+			color: #10ff94;
+		}
+		i{
+			color: red;
+			
+			text-align: center;
+			font-size: 50px;
+		}
+		.tim{
+			box-shadow: 1px 0 5px 1px;
+			animation: heartBeat;
+			animation-duration: 2s;
+			animation-iteration-count: infinite
+		}
+		.hr{
+			width: 100%;
+			text-align: center;
+		}
+		p{
+			/*color: #fff;*/
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
+		.flex{
+			position: absolute;
+			top: 40%;
+			left: 20%;
+			display: flex;
+			width: 60%;
+			text-align: justify;
+			display: none;
+		}
+		.flex > button{
+			background-color: black;
+			color: #fff;
+			font-size: 10px;
+			width: 50%;
+			height: 30px;
+			margin-left: 2%;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="hi">
+		<i class="fas fa-heart tim"></i>
+	</div>
+	<h1 animate__flash>Nghỉ dịch ăn ít thôi béo lắm rồi ^^</h1>
+	<div class="flex">
+		<button href="">Tớ rất béo</button>
+		<button href="">NO! Tôi vẫn xinh</button>
+	</div>
+	<span>Designer by <a href="https://www.facebook.com/hoanguyenvnua/" target="_blank">Nguyễn Văn Hoàng</a>.</span>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.tim').on('click', function(){
+				$('.tim').hide()
+				$("hr").animate(500).hide(1000)
+				$("p").animate({right: '0'}, 500).hide(1000)
+			})
+		})
+	</script>
+</body>
+</html>

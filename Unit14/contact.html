@@ -109,6 +109,21 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop()) {
+					$('header').addClass("sticky")
+				} else {
+					$('header').removeClass("sticky")
+				}
+			})
+			$(".menu").on("click", function () {
+				$('nav').slideToggle()
+
+			})
+		})
+	</script>
+	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#myForm").validate({
 				rules: {
